@@ -1,0 +1,15 @@
+version: "3"
+services:
+  backend: 
+    image: mpaserrano/json-server
+    ports:
+      - "3000:3000"
+    container_name: backend
+    volumes:
+      - ./backend/db.json:/products.json
+
+  frontend:
+    image: mpaserrano/frontend-nginx
+    ports:
+      - 80:80
+    container_name: frontend

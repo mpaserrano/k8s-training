@@ -1,3 +1,10 @@
 FROM nginx:alpine
 
-# here you want to copy the files into nginx, including the nginx.conf
+COPY ../nginx/nginx.conf /etc/nginx/nginx.conf
+
+COPY frontend/* /usr/share/nginx/html
+
+EXPOSE 80
+
+CMD ["nginx", "-g", "daemon off;"]
+
