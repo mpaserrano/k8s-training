@@ -6,7 +6,7 @@ services:
       - "3000:3000"
     container_name: backend
     volumes:
-      - ./backend/db.json:/products.json
+      - ./backend/db.json:/db.json
 
   frontend:
     image: mpaserrano/frontend-nginx

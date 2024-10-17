@@ -1,0 +1,7 @@
+resources:
+  - pv.yaml
+  - pvc.yaml
+  - backend-deployment.yaml
+  - nginx-deployment.yaml
+  - backend-service.yaml
+  - nginx-service.yaml
